@@ -1,4 +1,2 @@
 baseurl: /kai
 markdown: redcarpet
-safe: false
-pygments: true
