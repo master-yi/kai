@@ -1,13 +1,11 @@
 ---
-title:this is my first page
+layout: default
+title: 我的Blog
 ---
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>{{page.title}}</title>
-</head>
-<body>
-	<h1>这是我的第一个github page</h1>
-</body>
-</html>测试开始了
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
