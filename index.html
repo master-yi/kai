@@ -6,6 +6,6 @@ title: My Blog 1.0
 <p>最新文章</p>
 <ul>
 	{% for post in site.posts %}
-　　	<li>{{post.url}}</li>
+　　	<li>{{site.baseurl}}{{post.url}}</li>
 　　{% endfor %}
 </ul>
